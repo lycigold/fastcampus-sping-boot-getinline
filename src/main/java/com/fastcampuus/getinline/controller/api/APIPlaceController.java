@@ -2,7 +2,6 @@ package com.fastcampuus.getinline.controller.api;
 
 import com.fastcampuus.getinline.constant.PlaceType;
 import com.fastcampuus.getinline.dto.APIDataResponse;
-import com.fastcampuus.getinline.dto.PlaceDTO;
 import com.fastcampuus.getinline.dto.PlaceResponse;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,12 +31,12 @@ public class APIPlaceController {
     }
 
     @GetMapping("/places/{placeId}")
-    public APIDataResponse<PlaceDTO> getPlace(@PathVariable Integer placeId) {
+    public APIDataResponse<PlaceResponse> getPlace(@PathVariable Integer placeId) {
         if (placeId.equals(2)) {
             return APIDataResponse.of(null);
         }
 
-        return APIDataResponse.of(PlaceDTO.of(
+        return APIDataResponse.of(PlaceResponse.of(
                 PlaceType.COMMON,
                 "랄라배드민턴장",
                 "서울시 강남구 강남대로",
