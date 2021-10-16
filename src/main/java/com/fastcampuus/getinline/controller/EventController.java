@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class EventController {
 
-    @GetMapping("/")
+    @GetMapping
     public String places() { return "event/index";}
 
     @GetMapping("/{eventId}")
-    public String eventDetail(@PathVariable Integer eventId) { return "event/detail";}
+    public String eventDetail(@PathVariable Long eventId) { return "event/detail";}
 }
