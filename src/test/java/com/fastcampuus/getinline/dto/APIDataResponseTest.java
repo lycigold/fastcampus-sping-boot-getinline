@@ -25,9 +25,9 @@ class APIDataResponseTest {
 
     @DisplayName("데이터가 없을때, 비어있는 표준 성공 응답을 생성한다.")
     @Test
-    void givenNOthing_whenCreatingResponse_thenReturnsEmptySuccessfulResponse() {
+    void givenNothing_whenCreatingResponse_thenReturnsEmptySuccessfulResponse() {
         // Given
-        String data = "test data";
+        
         // When
         APIDataResponse<String> response = APIDataResponse.empty();
         // Then
